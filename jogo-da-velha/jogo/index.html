@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="res">
+    <p class="jog">X</p>
+    <div class="points">
+      <p class="ponto" id="px">0</p>
+      <p class="divisor">&nbsp;x&nbsp;</p>
+      <p class="ponto" id="po">0</p>
+    </div>
+    <p class="jog">O</p>
+  </div>
+  
+<!-- jogo -->
+  <div class="jogo">
+    <div class="linha">
+      <div onclick="joga('c1', 0)" class="casa" id="c1"></div>
+      <div onclick="joga('c2', 1)" class="casa" id="c2"></div>
+      <div onclick="joga('c3', 2)" class="casa" id="c3"></div>
+    </div>
+    <div class="linha">
+      <div onclick="joga('c4', 3)" class="casa" id="c4"></div>
+      <div onclick="joga('c5', 4)" class="casa" id="c5"></div>
+      <div onclick="joga('c6', 5)" class="casa" id="c6"></div>
+    </div>
+    <div class="linha">
+      <div onclick="joga('c7', 6)" class="casa" id="c7"></div>
+      <div onclick="joga('c8', 7)" class="casa" id="c8"></div>
+      <div onclick="joga('c9', 8)" class="casa" id="c9"></div>
+    </div>
+  </div>
+  <!-- jogo -->
+
+  <div class="footer"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>

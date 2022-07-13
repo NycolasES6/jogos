@@ -1,0 +1,71 @@
+:root{
+  --primary: rgb(82, 35, 255);
+  --secondary: rgb(136, 103, 255);
+  --tertiary: rgb(190, 172, 255);
+  --dark:rgb(28, 12, 87);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* POINTS */
+.res{
+  width: 100%;
+  height: 80px;
+  padding: 0 10px;
+  background-color: var(--tertiary);
+  color: var(--primary);
+  font-size: 40pt;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.points{
+  display: flex;
+}
+p.jog, p.o, p.x{
+  color: var(--dark);
+}
+/* POINTS */
+
+.jogo{
+  height: 500px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 10px;
+
+  background-color: var(--tertiary);
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.linha{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 33.33%;
+  width: 100%;
+}
+.linha + .linha{
+  border-top: 3px solid var(--primary);
+}
+
+.casa{
+  height: 100%;
+  width: 33.33%;
+  cursor: pointer;
+  font-size: 100pt;
+  text-align: center;
+  color: var(--dark);
+  text-transform: uppercase;
+}
+ #c1, #c2, #c4, #c5, #c7,#c8{
+  border-right: 3px solid var(--primary);
+}
