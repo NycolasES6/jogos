@@ -17,6 +17,7 @@ body,html{
   overflow-y: hidden;
 }
 
+
 /* POINTS */
 .res{
   width: 100%;
@@ -53,6 +54,8 @@ p.jog, p.o, p.x{
 }
 /* POINTS */
 
+
+/* TABULEIRO */
 .jogo{
   max-height: 500px;
   max-width: 500px;
@@ -105,12 +108,15 @@ p.jog, p.o, p.x{
     font-size: 5rem;
   }
 }
+/* TABULEIRO */
+
 
 /* GANHOU */
 #ganhou{
   position: absolute;
   right: calc(50vw - 225px);
-  width: 450px;
+  width: 90vw;
+  max-width: 450px;
 
   display: flex;
   flex-direction: column;
@@ -130,7 +136,7 @@ p.jog, p.o, p.x{
 #ganhou button{
   margin-top: 5px;
   width: 100%;
-  height: 30px;
+  height: 40px;
   font-size: 15pt;
   border: none;
   color: var(--dark);
