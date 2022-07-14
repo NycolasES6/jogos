@@ -19,7 +19,7 @@
   </div>
   
 <!-- jogo -->
-  <div class="jogo">
+  <div id="jogo" class="jogo">
     <div class="linha">
       <div onclick="joga('c1', 0)" class="casa" id="c1"></div>
       <div onclick="joga('c2', 1)" class="casa" id="c2"></div>
@@ -38,7 +38,10 @@
   </div>
   <!-- jogo -->
 
-  <div class="footer"></div>
+  <div id="ganhou" class="hide">
+    <p>Parabéns, você ganhou</p>
+    <button onclick="reiniciaJogo()">Reiniciar</button>
+  </div>
 
   <script src="index.js"></script>
 </body>

@@ -1,10 +1,12 @@
 // variaveis do jogo
 let casa, jog
+let tabuleiro = document.querySelectorAll('.casa')
 let j = 2
 let casas = ['', '', '', '', '', '', '', '', '']
 
 let placar = [0, 0]
-let ponto = [document.getElementById(px), document.getElementById(po)]
+let ponto = document.getElementsByClassName('ponto')
+let ganhou = document.getElementById('ganhou')
 // variaveis do jogo
 
 // Functions do jogo
@@ -12,7 +14,6 @@ function joga(c, ic) {
   if (casas[ic] != '')
   return alert("lugar ja está ecupado")
   
-
   if (j == 4)
     j = 2
     
@@ -86,7 +87,6 @@ function zeraJogo(){
 }
 
 function marcaPontos(){
-  ponto = document.getElementsByClassName('ponto')
 
   if (jog =='x')
   placar[0]++
@@ -95,5 +95,33 @@ function marcaPontos(){
 
   ponto[0].innerHTML = placar[0]
   ponto[1].innerHTML = placar[1]
+
+  for(let i=0;i<2;i++){
+    if(placar[i] == 3){
+      ganhou.classList.remove('hide')
+      ganhou.classList.add('show')
+      tabuleiro.forEach((casa)=>{
+        casa.classList.add('inactive')
+      })
+    }
+  }
 }
 // Functions do jogo
+
+//Reiniciar
+function reiniciaJogo(){
+  tabuleiro.forEach((casa)=>{
+    casa.classList.remove('inactive')
+  })
+  
+  ganhou.classList.add('hide')
+  ganhou.classList.remove('show')
+
+  placar[0] = 0
+  placar[1] = 0
+  ponto[0].innerHTML = placar[0]
+  ponto[1].innerHTML = placar[1]
+}
+
+
+//Reiniciar
