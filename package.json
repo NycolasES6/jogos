@@ -1,0 +1,14 @@
+{
+  "name": "jogos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/NycolasES6/jogos.git",
+  "author": "Nycolas Ramos <nycolas@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev":"nodemon jogo-da-velha/test-indexeddb/index.js"
+  },
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

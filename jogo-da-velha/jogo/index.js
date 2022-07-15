@@ -1,5 +1,6 @@
 // variaveis do jogo
 let casa, jog
+let emp=0
 let tabuleiro = document.querySelectorAll('.casa')
 let j = 2
 let casas = ['', '', '', '', '', '', '', '', '']
@@ -74,6 +75,20 @@ function verificaVenceu() {
     console.log(`jogador ${jog} venceu`)
     zeraJogo()
   }
+  
+  //Empate
+  for(let i=0;i<=8;i++){
+    if(casas[i] != ''){
+      emp ++
+    }
+  }
+  if(emp == 9)
+  zeraJogo()
+  
+  console.log(emp)
+  emp=0
+
+  
 }
 
 function zeraJogo(){
@@ -83,6 +98,7 @@ function zeraJogo(){
     casa.innerHTML = ''
     casas = ['', '', '', '', '', '', '', '', '']
   }
+  if(emp!=9)
   marcaPontos()
 }
 
